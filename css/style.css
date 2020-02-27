@@ -1,16 +1,6 @@
 /**
  * fil: css/style.css
  **/
-button {
-    background-color: #707070;
-    color: black;
-    opacity: 50%;
-    font-size: 16px;
-    padding: 30px;
-    display: inline-block;
-    border-radius: 30px;
-    width: 35%;
-}
 
 html, body {
 height: 100%;     
@@ -89,13 +79,25 @@ a:hover {
     color: burlywood;
 }
 
-#knap {
+#boxes {
     width: 70%;
     margin: 0 auto;
     margin-bottom: 120px;
     display: flex;
     justify-content: space-between;
 }
+
+ #boxes a {
+   background-color: rgba(255,255,255,0.3);  
+    color: white;
+    font-size: 16px;
+    padding: 30px;
+    display: inline-block;
+    border-radius: 30px;
+    width: 35%;
+     text-align: center;
+}
+
 
 h1,
 h2 {
