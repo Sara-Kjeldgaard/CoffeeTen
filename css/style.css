@@ -17,7 +17,7 @@ height: 100%;
 }
 
 body {
-    background-image: url(../images/kop.jpg);
+    background-image: url(/images/coffeecup.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -34,22 +34,55 @@ main {
 
 nav {
     height: 60px;
-    background-color: #707070;
-    padding-top: 10px;
+    /** background-color: #707070;**/
+    /**padding er ikke nødvendig når vi bruger flexbox til at centere */
+    /**padding-top: 10px;**/
     width: 100%;
-    opacity: 65%;
+    font-family: 'Raleway', sans-serif;
+    /** opacity laver på denne måde gennemsigtighed for HELE nav - vi er kun interesserede i en gennemsigtig bagrund til nav **/
+    /** opacity: 65%; **/
+    /** Farveskala: 255=hvid, 0=sort / o,3 = 30% gennemsigtighed **/
+    background-color: rgba(255,255,255,0.3);  
 }
 
-nav ul {
-    display: flex;
+nav ul{
+    /** ul skal fylde det hele af navs højde**/
+    height: 100%;
+    /** Vi fjerner den inbyggede margin og padding i ul**/
+    margin: 0;
+    padding: 0;
     list-style: none;
+    /** Vi sætter ul til at bruge flexbox (box moddel som siger noget om ul´s børns (li osv) layout) **/
+    display: flex;
+    /** space around gør at børnene fordeler sig ligeligt **/
     justify-content: space-around;
+    /** align-items: center - gør at børnene ligger i midten vertikalt**/
+    align-items: center;
+    
+
+        
 }
 
-nav ul li a {
-    margin-right: 50px;
+.link {
+    /** alle li skal forsøge at fylde lige meget **/
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.link.big {
+    /** den her skal forsøge at fylde dobbelt så meget **/
+    flex-grow: 2;
+}
+
+.logo {
+    margin-top: 15px;
+}
+
+nav ul li a{
+    margin-right: 0px;
     text-decoration: none;
-    color: white;
+    color: white;    
 }
 
 a:hover {
@@ -70,6 +103,7 @@ h2 {
     color: white;
     font-family: "Courier Prime";
     font-size: 50px;
+    
 }
 
 #title {
@@ -78,6 +112,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-shadow: 2px 2px 3px rgba(0,0,0,.3);
 }
 
 footer {
