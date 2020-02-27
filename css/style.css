@@ -8,8 +8,12 @@ button {
     font-size: 16px;
     padding: 30px;
     display: inline-block;
-    border-radius: 15%;
+    border-radius: 30px;
     width: 35%;
+}
+
+html, body {
+height: 100%;     
 }
 
 body {
@@ -19,7 +23,13 @@ body {
     background-size: cover;
     padding: 0;
     margin: 0;
-     font-family: "Raleway", sans-serif;
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 nav {
@@ -27,7 +37,6 @@ nav {
     background-color: #707070;
     padding-top: 10px;
     width: 100%;
-   
     opacity: 65%;
 }
 
@@ -50,7 +59,7 @@ a:hover {
 #knap {
     width: 70%;
     margin: 0 auto;
-    margin-top: 120px;
+    margin-bottom: 120px;
     display: flex;
     justify-content: space-between;
 }
@@ -63,8 +72,8 @@ h2 {
     font-size: 50px;
 }
 
-#title {    
- height: 600px;
+#title {
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,27 +81,25 @@ h2 {
 }
 
 footer {
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: space-around;
-    
 }
 
 footer p {
     color: white;
-    
 }
 
+.some {
+    display: flex;
+    padding-top: 15px;
+}
 
-
-
-
-
-
-
-
-
-
+.some a{
+    height: 35px;
+    width: 35px;
+    
+}
 
 
 
